@@ -1,0 +1,14 @@
+{
+  "name": "shop-backend",
+  "version": "1.0.0",
+  "description": "E-Commerce backend using Express and native SQLite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  },
+  "type": "commonjs"
+}
