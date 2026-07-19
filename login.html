@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account - Aesthetix</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">A</div>
+        <div class="logo-text">aesthetix<span>.</span></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-trigger" aria-label="View Shopping Cart">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+        <div id="header-auth-wrapper">
+          <!-- Auth details injected by main.js -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login/Register Hub Layout -->
+  <main class="container">
+    <div class="auth-wrapper">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-login">Sign In</button>
+        <button class="auth-tab" id="tab-register">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="form-login" class="auth-form active">
+        <div class="form-group">
+          <label for="login-email-username">Username or Email</label>
+          <input type="text" id="login-email-username" placeholder="Enter username or email" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-checkout" style="background: var(--pastel-yellow); color: var(--bg-dark);">
+          Sign In
+        </button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="form-register" class="auth-form">
+        <div class="form-group">
+          <label for="register-username">Username</label>
+          <input type="text" id="register-username" placeholder="e.g. pastelguy" required>
+        </div>
+        <div class="form-group">
+          <label for="register-email">Email Address</label>
+          <input type="email" id="register-email" placeholder="e.g. hello@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="register-password">Password</label>
+          <input type="password" id="register-password" placeholder="At least 6 characters" required minlength="6">
+        </div>
+        <button type="submit" class="btn-checkout" style="background: var(--pastel-blue); color: var(--bg-dark);">
+          Create Account
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 <span>aesthetix.</span> All rights reserved. Designed with premium pastel accents.</p>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

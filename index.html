@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetix - Premium Pastel Shop</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">A</div>
+        <div class="logo-text">aesthetix<span>.</span></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-trigger" aria-label="View Shopping Cart">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+        <div id="header-auth-wrapper">
+          <!-- Auth details injected by main.js -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">THE PASTEL COLLECTION</span>
+      <h1>Aesthetic Items for Modern Workspaces</h1>
+      <p>Handpicked, high-quality products finished in soft sky blue, buttery yellows, and matte slate black shades.</p>
+    </div>
+  </section>
+
+  <!-- Main Catalog Content -->
+  <main class="container">
+    <!-- Filters and Search Controls -->
+    <div class="shop-controls">
+      <div class="search-bar">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input type="text" id="search-input" placeholder="Search product name or keyword...">
+      </div>
+      <div class="filter-group">
+        <select id="sort-select">
+          <option value="">Sort By</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category Filter Chips -->
+    <div class="category-chips" id="category-container">
+      <div class="chip active" data-category="">All Items</div>
+      <div class="chip" data-category="Electronics">Electronics</div>
+      <div class="chip" data-category="Fashion">Fashion</div>
+      <div class="chip" data-category="Home Decor">Home Decor</div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="products-container">
+      <!-- Products loaded via JS -->
+      <div class="empty-state">
+        <p>Loading curated catalog...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 <span>aesthetix.</span> All rights reserved. Designed with premium pastel accents.</p>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
